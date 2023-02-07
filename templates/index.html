@@ -72,27 +72,13 @@
             <div id="block_main_fridge" class="block_main_fridge">
                 <button id="button_fridge_slayder_left" hidden="false"><img src="static/image/left.png" alt="" class="img_slayder_button_fridge"></button>
                 <div class="block_fridge">
-                    <div class="fridge_block_scrol_1">
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                    </div>
-                    <div class="fridge_block_scrol_1">
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                    </div>
-                    <div class="fridge_block_scrol_1">
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
-                    </div>
+                    {% for i in range(3) %}
+                        <div class="fridge_block_scrol_1">
+                            {% for i in range(5) %}
+                                <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
                 </div>
                 <button id="button_fridge_slayder_right" hidden="false"><img src="static/image/right.png" alt="" class="img_slayder_button_fridge"></button>
                 <div class="block_block_fridge_button" onclick="createReceptWithMyProducts()"><img src="static/image/cooking.png" alt=""></div>
