@@ -10,11 +10,11 @@
 3. Для перегляду рецепту та інградієнтів, необхідних для приготування, натисніть на зображення потрібної вам страви
 4. Для додавання на сторінку наявних у Вас продуктів, перейдіть у меню "Fridge" за допомогою кнопки, розташованої у правій верхній частині сторінки.
    Далі натисніть на один з порожніх відсіків "холодильника":
-   <img src="https://like-from-a-hungry-land.herokuapp.com/static/image/add.png" style="width: 5vw">
+   <img src="https://like-from-a-hungry-land.herokuapp.com/static/image/add.png" style="width: 5vw; magin-right: auto; display: block;">
    та у спливаючому вікні в пошуковий рядок введіть назву продукту та оберіть один із 
    запропонованих варіантів.
 5. Для сортування наявних у Вас продуктів скористайтеся кнопками, розташованими у лівій частині сторінки Fridge
 6. Для пошуку рецептів, які можна приготувати із наявних у Вас продуктів, натисніть кнопку, яка знаходиться у нижній правій частині сторінки Fridge:
-   <img src="https://like-from-a-hungry-land.herokuapp.com/static/image/cooking.png" style="width: 5vw">
+   <img src="https://like-from-a-hungry-land.herokuapp.com/static/image/cooking.png" style="width: 5vw; magin-right: auto; display: block;">
 
 <label style="color: red">!!!Важливо: усі пошукові запити мають вводитися виключно англійською мовою!!!</label>
