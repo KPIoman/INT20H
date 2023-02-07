@@ -11,10 +11,6 @@ let removeButton, clickBlockForSaveProduct;
 let mas_id_Fridge = [], mas_name_Fridge = [];
 let text_Fridge;
 const api_key = "f3cd0361edff4cafaec27267cc4ac7fa"
-// https://api.spoonacular.com/recipes/716429/information?apiKey=3d7b2193ddc2428fae65f393615763e8
-// https://api.spoonacular.com/recipes/9040;11976;11529/card?apiKey=3d7b2193ddc2428fae65f393615763e8
-// https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2&apiKey=ed97ce280fd047f2b75791d8bb9e8fab
-// https://api.spoonacular.com/food/ingredients/11529/information?amount=1&apiKey=9459b77b3de14757b8581ec4dcea4c23
 
 	loadNodeListMyFridgeElements();
 	addInvisibilitiOnLastBlock();

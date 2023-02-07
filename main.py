@@ -4,10 +4,6 @@ import requests
 import os
 
 app = Flask(__name__)
-API_KEY = "459d6890759a46e18ec3bff6ac304f45" #heroku
-API_KEY = "ed97ce280fd047f2b75791d8bb9e8fab" #xafosico
-API_KEY = "3d7b2193ddc2428fae65f393615763e8" #school
-API_KEY = "9459b77b3de14757b8581ec4dcea4c23" #my
 API_KEY = "f3cd0361edff4cafaec27267cc4ac7fa" #my 2
 
 def apiSearch(query):
