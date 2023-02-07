@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fridge_main_menu" id="fridge_main_menu">
+		<div class="fridge_menu">
+		<button class="close_search_menu_button" onclick="closeSearchMenu()"><strong>+</strong></button>
+		<div id="search_product" class="search_product">
+			<form name="publish">
+				<input type="submit" id="search_product_button" class="search_product_button" value = "Find"/>
+				<input type="text" id="search_product_input" name="message"/>
+			</form>
+        </div>
+			<div id="fridge_blocks_menu" class="fridge_blocks_menu">
+				<ul>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div id="block_recipe_popup"></div>
+    <header id="block_Header">
+        <div id="search">
+            <form action="" method="POST">
+                <!-- <input name="searchReceipt" type="submit" id="search_button"> -->
+                <button id="search_button" name="searchReceipt" type="submit"><img src="static/image/search.png" alt="" id="search_button_img"></button>
+                <input type="text" id="search_input" placeholder="Enter the recipe you are looking for" name="search">
+            </form>
+            <!-- <div id="block_sort">
+                <button class="button_sort"><p class="sort_text"><strong>Diet meals</strong></p></button>
+                <button class="button_sort"><p class="sort_text"><strong>Meat dishes</strong></p></button>
+                <button class="button_sort"><p class="sort_text"><strong>Salats</strong></p></button>
+                <button class="button_sort"><p class="sort_text"><strong>Soups</strong></p></button>
+            </div> -->
+        </div>
+        <div id="block_ak">
+            <div id="block_ak1"><p id="text_meny_future">Fridge</p></div>
+            <img src="/static/image/Fridge.png" alt="" style="height: 100%;">
+        </div>
+    </header>
+    <div id="block_content">
+        <div id="block_meny">
+            <button class="button_meny" onclick="fin_function('fruit')">Fruit</button>
+            <button class="button_meny" onclick="fin_function('vegetable')">Vegetable</button>
+            <button class="button_meny" onclick="fin_function('baked goods')">Baked goods</button>
+            <button class="button_meny" onclick="fin_function('drink')">Drink</button>
+            <button class="button_meny" onclick="Clear_sort()">Clear sort</button>
+        </div>
+        <div id="block_dishes" class="block_dishes">
+            <button id="button_slayder_left" style="z-index: 1;"><img src="static/image/left.png" alt="" class="img_slayder_button"></button>
+            <button id="button_slayder_right" style="z-index: 1;"><img src="static/image/right.png" alt="" class="img_slayder_button"></button>
+            {%if list %}
+                <div class="block_scrol_1">
+                    {% for i in list[0] %}
+                        <div class="block_block_dishes_item" style="overflow: hidden;"><img class="img_content_meny" style="border-radius: 20px; max-height: 100%;" src="{{ i['image'] }}" onclick="getRecipe({{ i['id'] }})"></div>
+                    {% endfor %}
+                </div>
+                <div class="block_scrol_2">
+                    {% for i in list[1] %}
+                        <div class="block_block_dishes_item" style="overflow: hidden;"><img class="img_content_meny" style="border-radius: 20px; max-height: 100%;" src="{{ i['image'] }}" onclick="getRecipe({{ i['id'] }})"></div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div id="block_Fridge" class="block_Fridge_all">
+            <div id="block_main_fridge" class="block_main_fridge">
+                <button id="button_fridge_slayder_left" hidden="false"><img src="static/image/left.png" alt="" class="img_slayder_button_fridge"></button>
+                <div class="block_fridge">
+                    <div class="fridge_block_scrol_1">
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                    </div>
+                    <div class="fridge_block_scrol_1">
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                    </div>
+                    <div class="fridge_block_scrol_1">
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                        <div class="block_block_fridge_item"><img src="static/image/add.png" class="block_block_fridge_menu_start_picture" alt=""></div>
+                    </div>
+                </div>
+                <button id="button_fridge_slayder_right" hidden="false"><img src="static/image/right.png" alt="" class="img_slayder_button_fridge"></button>
+                <div class="block_block_fridge_button" onclick="createReceptWithMyProducts()"><img src="static/image/cooking.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <Footer id="Footer">
+        <a href="https://www.instagram.com/vlad14582/" class="href_item_communication"><img src="static/image/Instagram.png" alt="" style="max-width: 5.2vw; margin-top: -0.7vw;"></a>
+        <a href="https://github.com/KPIoman/INT20H" class="href_item_communication"><img src="static/image/GitHub.png" alt="" style="max-width: 5.2vw; margin-top: -0.7vw;"></a>
+        <a href="https://t.me/xafosico" class="href_item_communication"><img src="static/image/Telegram.png" alt="" style="max-width: 5.2vw; margin-top: -0.7vw;"></a>
+        <img src="static/image/prapor.png" alt="" height="80%" style="margin-top: 0.5%; margin-left: 75vw;">
+    </Footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" defer></script>
+    <script src = "/static/js/scripts.js" defer></script>
+    <script src = "/static/js/frigh.js" defer></script>
+</body>
+</html>
