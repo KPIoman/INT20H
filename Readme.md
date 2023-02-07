@@ -15,6 +15,6 @@
 запропонованих варіантів.
 5. Для сортування наявних у Вас продуктів скористайтеся кнопками, розташованими у лівій частині сторінки Fridge.
 6. Для пошуку рецептів, які можна приготувати із наявних у Вас продуктів, натисніть кнопку, яка знаходиться у нижній правій частині сторінки Fridge.
-<img src="https://like-from-a-hungry-land.herokuapp.com/static/image/cooking.png">
+<img src="https://like-from-a-hungry-land.herokuapp.com/static/image/cooking.png" style="width: 20vw">>
 
 <label color="red">!!!Важливо: усі пошукові запити мають вводитися виключно англійською мовою.</label>
